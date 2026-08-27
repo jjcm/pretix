@@ -1,15 +1,173 @@
 /* FONT PATH
+ * The icon font is split into unicode-range chunks (see ../generate_split_fonts.py)
+ * so a page only downloads the glyph ranges for the icons it renders.
  * -------------------------- */
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(static('fontawesome/fonts/fontawesome-webfont.eot'));
-  src: url(static('fontawesome/fonts/fontawesome-webfont.eot')) format('embedded-opentype'),
-    url(static('fontawesome/fonts/fontawesome-webfont.woff2')) format('woff2'),
-    url(static('fontawesome/fonts/fontawesome-webfont.woff')) format('woff'),
-    url(static('fontawesome/fonts/fontawesome-webfont.ttf')) format('truetype'),
-    url(static('fontawesome/fonts/fontawesome-webfont.svg')) format('svg');
-//  src: url('fontawesome/fonts/FontAwesome.otf') format('opentype'); // used when developing fonts
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F000.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F000.woff')) format('woff');
   font-weight: normal;
   font-style: normal;
+  unicode-range: U+0020,U+00A8-00AE,U+00B4,U+00C6,U+00D8,U+2122,U+221E,U+2260,U+F000-F03F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F040.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F040.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F040-F07F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F080.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F080.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F080-F0BF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F0C0.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F0C0.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F0C0-F0FF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F100.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F100.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F100-F13F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F140.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F140.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F140-F17F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F180.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F180.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F180-F1BF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F1C0.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F1C0.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F1C0-F1FF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F200.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F200.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F200-F23F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F240.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F240.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F240-F27F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F280.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F280.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F280-F2BF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F2C0.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F2C0.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F2C0-F2FF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F300.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F300.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F300-F33F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F340.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F340.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F340-F37F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F380.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F380.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F380-F3BF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F3C0.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F3C0.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F3C0-F3FF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F400.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F400.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F400-F43F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F440.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F440.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F440-F47F;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F480.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F480.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F480-F4BF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F4C0.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F4C0.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F4C0-F4FF;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(static('fontawesome/fonts/split/fontawesome-webfont-F500.woff2')) format('woff2'),
+    url(static('fontawesome/fonts/split/fontawesome-webfont-F500.woff')) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+F500-F53F;
 }
