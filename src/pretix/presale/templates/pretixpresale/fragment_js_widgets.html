@@ -1,0 +1,11 @@
+{% load static %}
+{% load compress %}
+{# Widget libraries only some pages need (date pickers, sliders, QR codes, image cropping). #}
+{# Included by default via the widget_js block in base.html; entry pages that render none #}
+{# of these widgets override the block to keep them off the first-load critical path. #}
+{% compress js file presalewidgets %}
+    <script type="text/javascript" src="{% static "datetimepicker/bootstrap-datetimepicker.js" %}"></script>
+    <script type="text/javascript" src="{% static "slider/bootstrap-slider.js" %}"></script>
+    <script type="text/javascript" src="{% static "cropper/cropper.js" %}"></script>
+    <script type="text/javascript" src="{% static "pretixcontrol/js/jquery.qrcode.min.js" %}"></script>
+{% endcompress %}

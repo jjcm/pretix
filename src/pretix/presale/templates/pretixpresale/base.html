@@ -16,6 +16,7 @@
     {% endif %}
 
     {% include "pretixpresale/fragment_js.html" %}
+    {% block widget_js %}{% include "pretixpresale/fragment_js_widgets.html" %}{% endblock %}
     <meta name="referrer" content="origin">
     {{ html_head|safe }}
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -27,6 +27,12 @@
     {% endif %}
 {% endblock %}
 
+{% block widget_js %}
+    {# The event front page renders none of the optional widgets unless the date filter of #}
+    {# an event series is shown, so simple events keep this JS off the critical path. #}
+    {% if request.event.has_subevents %}{{ block.super }}{% endif %}
+{% endblock %}
+
 {% block custom_header %}
     {{ block.super }}
     <meta property="og:title" content="{{ ev.name }}" />
