@@ -8,6 +8,13 @@
 <html{% if rtl %} dir="rtl" class="rtl"{% endif %} lang="{{ html_locale }}">
 <head>
     <title>{% block thetitle %}{% endblock %}</title>
+    {# The largest paint waits on these fonts, which are otherwise only discovered after #}
+    {# the stylesheet arrives; preloading starts them in parallel with the render-blocking assets. #}
+    <link rel="preload" href="{% static "fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff2" %}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{% static "fonts/opensans_bold_macroman/OpenSans-Bold-webfont.woff2" %}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{% static "fonts/opensans_italic_macroman/OpenSans-Italic-webfont.woff2" %}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{% static "fontawesome/fonts/split/fontawesome-webfont-F000.woff2" %}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{% static "fontawesome/fonts/split/fontawesome-webfont-F040.woff2" %}" as="font" type="font/woff2" crossorigin>
     {% compress css file presale %}
         <link rel="stylesheet" type="text/x-scss" href="{% static "pretixpresale/scss/main.scss" %}"/>
     {% endcompress %}
