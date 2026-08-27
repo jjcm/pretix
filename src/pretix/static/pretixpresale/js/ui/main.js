@@ -209,10 +209,11 @@ var form_handlers = function (el) {
             true
         ));
     }
-    var cancel_fee_slider = el.find('#cancel-fee-slider').slider({
+    var $cancel_fee_slider = el.find('#cancel-fee-slider');
+    var cancel_fee_slider = $cancel_fee_slider.length ? $cancel_fee_slider.slider({
     }).on('slide', function () {
         cancel_fee_slider_update();
-    }).data('slider');
+    }).data('slider') : null;
     if (cancel_fee_slider) {
         cancel_fee_slider_update();
         el.find("#cancel-fee-custom").click(function () {
